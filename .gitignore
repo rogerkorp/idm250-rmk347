@@ -1,0 +1,32 @@
+/wp-admin/
+/wp-content/uploads
+/wp-content/languages
+/wp-content/plugins/
+/wp-content/index.php
+/wp-content/themes/index.php
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# Configuration
+wp-config.php
+
+# Example themes
+/wp-content/themes/twenty*/
+
+# Example plugin
+/wp-content/plugins/hello.php
+
+# Uploads
+/wp-content/uploads/
+
+# Log files
+*.log
+
+*.DS_Store
+# htaccess
+/.htaccess
+
