@@ -61,4 +61,10 @@ function nd_dosth_theme_setup(){
 
 add_action('after_setup_theme', 'nd_dosth_theme_setup');
 
+function add_post_thumbnails_support(){
+    add_theme_support('post-thumbnails');
+}
+
+add_action('after_setup_theme', 'add_post_thumbnails_support');
+
 ?>
