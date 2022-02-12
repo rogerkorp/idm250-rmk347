@@ -4,7 +4,7 @@ Theme URI:
 Author: Roger Korpics
 Author URI:
 Description: Wordpress Theme
-Version: 1.1
+Version: 2022.02.10
 */
 
 
@@ -195,15 +195,22 @@ Version: 1.1
 
 body{
     margin:0;
+    color: #292929;
 }
 
 .menu{
+    position: fixed;
+    top:0;
     margin: 0;
     background-color: #292929;
     color: white;
     width: 100%;
     display: grid;
     justify-content: right;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    z-index: 1;
 }
 
 .menu ul li{
@@ -315,4 +322,207 @@ th{
     background-color: rgb(87, 87, 87);
     color: white;
     font-weight: bold;
+}
+
+#front-page-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: auto;
+}
+
+#front-grid{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: auto;
+    padding: 1em;
+    max-width: 62.5em;
+}
+
+#front-page-name-and-role{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+
+}
+
+#front-page-hero-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#front-img{
+    max-width: 100%;
+    border-radius: 1em;
+    padding: auto;
+    margin-top: 4em;
+}
+
+#front-title{
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 3.75em;
+    margin: 0;
+}
+
+#front-subtitle{
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 2.25em;
+    margin: 0;
+}
+
+#front-page-contact-links{
+    margin:auto;
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: 6em 6em 6em ;
+}
+
+.front-page-circular-links{
+    height: 4.68em;
+    width: 4.68em;
+    background-color: #292929;
+    border-radius: 4em;
+    margin: auto;
+}
+
+.front-page-circular-links:hover{
+    cursor: pointer;
+}
+
+#error-page-main{
+    margin-top: 5em;
+    font-family: 'Poppins';
+}
+
+#error-page-main h1{
+    margin: 0;
+    font-size: 6em;
+    margin: 0;
+    margin-left: 10%;
+}
+
+#error-page-main p{
+    font-size: 2.25em;
+    font-weight: 300;
+    margin: 0;
+    margin-left: 10%;
+}
+
+
+.portfolio-display-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfilio-listing-container{
+    display: grid;
+    margin: auto;
+    grid-template-rows: 2fr 1fr;
+    margin-bottom: 1em;
+    width: 90%;
+    height: 15.5em;
+}
+
+.portfilio-listing-upper-half{
+    border-radius: 1em 1em 0 0;
+    background-color: lightgray;
+}
+
+.portfilio-listing-bottom-half{
+    border-radius: 0 0 1em 1em;
+    background-color: rgb(92, 92, 92);
+    box-shadow: 0 5px 5px lightgrey;
+    padding-left: 1em;
+    font-family: 'Poppins';
+    color: white;
+}
+
+.portfolio-body{
+    margin-top: 4em;
+}
+
+.search-box{
+    max-width: 31.25em ;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-bottom: 1em;
+    font-family: 'Poppins';
+    padding: 1em;
+}
+
+#search{
+    border-radius: 1em 0 0 1em;
+    border: 2px solid lightgray;
+    border-right: none;
+    width: 100%;
+    padding: 1em;
+    font-family: 'Poppins';
+}
+
+#submit-search{
+    background-color: #292929;
+    border: none;
+    border-radius: 0 1em 1em 0;
+    color: white;
+    width: 5em;
+    font-family: 'Poppins';
+}
+
+#submit-search:hover{
+    cursor: pointer;
+}
+
+@media screen and (min-width: 725px) {
+    #front-grid{
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 'front-page-hero-image front-page-name-and-role';
+        text-align: left;
+        margin: auto;
+    }
+
+    #front-page-name-and-role{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin: auto;
+        margin-left: 2em;
+    }
+    
+    #front-page-contact-links{
+        display: grid;
+        grid-template-columns: 6em 6em 6em auto ;
+        margin: 0;
+        margin-top: 1em;
+    }
+
+    .front-page-circular-links{
+        height: 4.68em;
+        width: 4.68em;
+        background-color: #292929;
+        border-radius: 4em;
+        margin: 0;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) {
+.portfolio-display-grid{
+    grid-template-columns: 1fr 1fr;
+}
 }

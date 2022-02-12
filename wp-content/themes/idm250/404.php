@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<h1>404</h1>
-<h2>Looks Like This PAge Doesn't Exist?</h2>
-
+<main id="error-page-main">
+    <h1>404</h1>
+    <p>Page not found.</p>
+</main>
 <?php get_footer(); ?>

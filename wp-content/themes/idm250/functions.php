@@ -17,7 +17,9 @@ if(version_compare($GLOBALS['wp_version'], '5.4.2', '<')){
 
 function include_styles(){
     wp_enqueue_style(
-     'style', get_stylesheet_uri()
+     'style', get_template_directory_uri() . '/style.css'/* , //google normalize CDN for a perma-link to stylesheets
+     [],
+     time() */  // REMOVE THESE TWO LINES ON LIVE
     );
 }
 
@@ -66,5 +68,7 @@ function add_post_thumbnails_support(){
 }
 
 add_action('after_setup_theme', 'add_post_thumbnails_support');
+
+
 
 ?>

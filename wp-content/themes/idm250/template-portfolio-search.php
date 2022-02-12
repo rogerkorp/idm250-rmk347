@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Portfolio List
+/* Template Name: Portfolio Search
 */
 ?>
 
@@ -10,6 +10,11 @@
 
   <div class="portfolio-body">
     <?php the_content(); ?>
+
+    <form class="search-box">
+        <input type="text" id="search" placeholder="Search">
+        <input type="submit" id="submit-search" value="Go">
+    </form>
 
     <div class="portfolio-display-grid">
 
