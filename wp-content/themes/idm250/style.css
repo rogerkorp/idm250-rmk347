@@ -233,12 +233,27 @@ body{
 }
 
 .single-title{
-    background-color: grey;
+    background-color: #292929;
     padding: 1em;
+    padding-bottom: .25em;
+    padding-top: .75em;
     color: white;
-    border-radius: .25em;
-    box-shadow: 0px 5px 5px rgb(187, 187, 187);
+    margin: 0;
 }
+
+.single-title-date{
+    background-color: #292929;
+    color: white;
+    border-radius: 0 0 .25em .25em;
+    box-shadow: 0px 5px 5px rgb(187, 187, 187);
+    margin-top: 0;
+    font-size: 1.25em;
+    padding: 1em;
+    padding-top: 0;
+    padding-left: 1.75em;
+    padding-bottom: 1.25em;
+}
+
 
 .single-content{
     max-width: 650px;
@@ -302,8 +317,23 @@ ol > li::marker {
     border-radius: .5em;
 }
 
+.wp-block-image img{
+    max-width: 100%;
+    height: auto;
+}
+
+
 .wp-block-video{
     border-radius: .5em;
+}
+
+.wp-post-image{
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+    display: block;
+    margin-top: 1em;
+    border-radius: .25em .25em 0 0;
 }
 
 figcaption{

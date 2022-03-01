@@ -44,4 +44,4 @@ function register_custom_post_type()
 
 }
 
-add_action('init', 'register_custom_post_type')
+add_action('init', 'register_custom_post_type'); //This calls a function that creates a custom post type.

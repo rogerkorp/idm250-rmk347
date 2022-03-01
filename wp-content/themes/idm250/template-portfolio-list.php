@@ -12,7 +12,7 @@
     <?php the_content(); ?>
 
     <div class="portfolio-display-grid">
-
+      
       <div class="portfilio-listing-container">
         <div class="portfilio-listing-upper-half"></div>
         <div class="portfilio-listing-bottom-half"><h2>Title of Piece</h2></div>
