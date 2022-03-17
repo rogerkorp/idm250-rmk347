@@ -104,6 +104,9 @@ function register_custom_post_type()
         'exclude_from_search' => false,
         'publicly_queryable' => true,
         'show_in_rest' => true,
+        'rewrite' => [ //without this, it will just use the registered post type by default. 
+            'slug' => 'projects'
+        ],
         // Dash Icons https://developer.wordpress.org/resource/dashicons/#media-audio
         'menu_icon' => 'dashicons-clipboard'
         // 'menu_icon'             => get_stylesheet_directory_uri() . '/static/images/icons/industries.png'
