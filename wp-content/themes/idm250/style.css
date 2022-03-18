@@ -1,10 +1,10 @@
 /*
-Theme Name: Example
+Theme Name: RK's Clean Theme
 Theme URI: 
 Author: Roger Korpics
-Author URI:
-Description: Wordpress Theme
-Version: 2022.02.10
+Author URI: http://rkorpics.com
+Description: My first custom WordPress theme! Created for IDM 250.
+Version: 1.0
 */
 
 
@@ -195,32 +195,83 @@ Version: 2022.02.10
 
 body{
     margin:0;
+    margin-top: 8em;
     color: #292929;
 }
 
-.menu{
-    position: fixed;
-    top:0;
+.contact-icon{
+    margin: auto;
+    width: 45%;
+}
+
+nav{
+    position: absolute;
+    top: 0;
     margin: 0;
     background-color: #292929;
     color: white;
     width: 100%;
     display: grid;
-    justify-content: right;
+    grid-template-rows: 1fr, 1fr;
     font-family: 'Poppins';
     text-transform: uppercase;
     margin-bottom: 1em;
     z-index: 1;
+    padding-right: 1em;
+    padding-bottom: 1em;
 }
 
-.menu ul li{
+nav .menu{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+nav ul li{
     display: inline-block;
-    padding-right: 1em
+    margin-right: .5em;
+    margin-left: .5em;
 }
 
-.menu a{
+nav a{
     color: white;
     text-decoration: none;
+    transition-property: background-color, color;
+    transition-duration: .15s;
+    padding-right: .5em;
+    padding-left: .5em;
+    border-radius: 1em;
+}
+
+nav .search-box{
+    display: flex;
+    justify-content: right;
+    font-size: 0;
+    font-family: 'Poppins';
+    left: 1;
+}
+
+.search-box input{
+    border-radius: 1em 0 0 1em;
+    background-color: #292929;
+    border: 1px solid white;
+    padding: 1em;
+    font-family: 'Poppins';
+    color: white;
+}
+
+.search-box button{
+    border-radius: 0 1em 1em 0;
+    background-color: white;
+    border: 1px solid white;
+    padding: 1em;
+    font-family: 'Poppins';
+    margin-right: 1em;
+}
+
+nav a:hover{
+    background-color: white;
+    color: #292929;
 }
 
 .single-body{
@@ -252,6 +303,19 @@ body{
     padding-top: 0;
     padding-left: 1.75em;
     padding-bottom: 1.25em;
+}
+
+.single-title-client{
+        background-color: #292929;
+        color: white;
+        margin-top: 0;
+        font-size: 1.25em;
+        padding: 1em;
+        padding-top: 0;
+        padding-left: 1.75em;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        font-style: italic;
 }
 
 
@@ -354,12 +418,45 @@ th{
     font-weight: bold;
 }
 
+#contact-github{
+    background-color: rgb(133, 73, 168);
+    transition-property: background-color;
+    transition-duration: .25s;
+}
+
+#contact-github:hover{
+    background-color: rgb(32, 20, 66);
+}
+
+
+#contact-linkedin{
+    background-color: rgb(8, 153, 197);
+    transition-property: background-color;
+    transition-duration: .25s;
+}
+
+#contact-linkedin:hover{
+    background-color: rgb(9, 51, 90);
+}
+
+#contact-youtube{
+    background-color: #f14972;
+    transition-property: background-color;
+    transition-duration: .25s;
+}
+
+#contact-youtube:hover{
+    background-color: #6e073a;
+}
+
+
+
 #front-page-wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
     margin: auto;
+    height: 100vh;
 }
 
 #front-grid{
@@ -371,6 +468,7 @@ th{
     display: block;
     margin: auto;
     padding: 1em;
+    padding-top: 10em;
     max-width: 62.5em;
 }
 
@@ -422,6 +520,9 @@ th{
     background-color: #292929;
     border-radius: 4em;
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .front-page-circular-links:hover{
@@ -460,9 +561,21 @@ th{
     display: grid;
     margin: auto;
     grid-template-rows: 2fr 1fr;
-    margin-bottom: 1em;
+    margin-bottom: 3em;
     width: 90%;
     height: 15.5em;
+    margin-top: 1em;
+}
+
+.portfilio-listing-container .wp-post-image {
+    height: auto;
+    max-width: 100%;
+    height: 10em;
+    margin: 0;
+    display: block;
+    margin-top: 1em;
+    border-radius: 1em 1em 0 0;
+    object-fit: cover;
 }
 
 .portfilio-listing-upper-half{
@@ -472,25 +585,16 @@ th{
 
 .portfilio-listing-bottom-half{
     border-radius: 0 0 1em 1em;
-    background-color: rgb(92, 92, 92);
+    background-color: #292929;
     box-shadow: 0 5px 5px lightgrey;
     padding-left: 1em;
     font-family: 'Poppins';
     color: white;
+    margin-bottom: 1em;
 }
 
 .portfolio-body{
     margin-top: 4em;
-}
-
-.search-box{
-    max-width: 31.25em ;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    margin-bottom: 1em;
-    font-family: 'Poppins';
-    padding: 1em;
 }
 
 #search{
@@ -514,6 +618,36 @@ th{
 #submit-search:hover{
     cursor: pointer;
 }
+
+.search-box{
+    align-self: left;
+   
+}
+
+#search{
+    border-radius: 1em 0 0 1em;
+    border: 2px solid lightgray;
+    border-right: none;
+    width: 100%;
+    padding: 1em;
+    font-family: 'Poppins';
+}
+
+#submit-search{
+    background-color: #292929;
+    border: none;
+    border-radius: 0 1em 1em 0;
+    color: white;
+    width: 5em;
+    font-family: 'Poppins';
+}
+
+#submit-search:hover{
+    cursor: pointer;
+}
+
+
+
 
 @media screen and (min-width: 725px) {
     #front-grid{
@@ -548,6 +682,25 @@ th{
         margin: 0;
     }
 
+    #front-img{
+        max-width: 100%;
+        border-radius: 1em;
+        padding: auto;
+        margin-top: 4em;
+        transition-property: margin-bottom, box-shadow;
+        transition-duration: .25s;
+    }
+    
+    #front-img:hover{
+        margin-bottom: 1em;
+        box-shadow: 0 1em 1em rgba(78, 78, 78, 0.089);
+    }
+
+    .about-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
 
 }
 
@@ -555,4 +708,61 @@ th{
 .portfolio-display-grid{
     grid-template-columns: 1fr 1fr;
 }
+}
+
+/* About Page Template */
+
+.about-body{
+    max-width: 60em;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Poppins';
+    font-weight: 400;
+    padding-top: 2em;
+    font-size: 1em;
+}
+
+
+.about-content, .wp-block-group{
+    padding: .5em;
+}
+
+.wp-block-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wp-block-social-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content figure{
+    border-radius: 1em;
+    max-width: 20em;
+}
+
+
+.about-content strong{
+    font-size: 1.75em;
+}
+
+.about-title{
+    text-align: center;
+    font-size: 3em;
+    padding: .25em;
+    background-color: #292929;
+    color: white;
+    border-radius: .25em;
+    margin-left: 1em;
+    margin-right: 1em;
+    box-shadow: 0px 5px 5px rgb(187, 187, 187);
+}
+
+.no-results-found{
+    text-align: center;
+    margin-top: 25vh;
+    font-family: 'Poppins';
 }

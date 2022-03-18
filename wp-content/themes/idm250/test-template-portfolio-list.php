@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Portfolio List
+/* Template Name: IDM Projects List
 */
 ?>
 
@@ -14,7 +14,7 @@
 
     <?php 
     // the query
-    $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
+    $wpb_all_query = new WP_Query(array('post_type'=>'idm-projects', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
     
     <?php if ( $wpb_all_query->have_posts() ) : ?>
     
