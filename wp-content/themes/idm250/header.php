@@ -17,7 +17,7 @@
         ?>
         <form class="search-box" action="<?php echo home_url(); ?>" method="get">
             <input type="text" name="s" value="" placeholder="Search...">
-            <input type="hidden" name="post_type[]" value="idm-projects">
+            <input type="hidden" name="post_status[]" value="'publish'">
             <button>Go</button>
         </form>
 </nav>

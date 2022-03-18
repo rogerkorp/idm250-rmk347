@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php 
+/*
+Template Name: Archive-B
+*/
+
+
+get_header(); ?>
 
 
 
@@ -6,12 +12,10 @@
   <div class="portfolio-display-grid">
 
 <?php
-      $search_word = $_GET['s'];
-      $post_type = $_GET['post_status'];
+      $post_status = 'publish';
 
       $args = [
-          's' => $search_word,
-          'post_status' => $post_type,
+          'post_status' => $post_status,
         ];
 
       $search_query = new WP_Query($args);
